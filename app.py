@@ -16,6 +16,7 @@ if st.button("Build ws3d JAR"):
         )
 
     shutil.rmtree("ws3d/build")
+    shutil.rmtree("ws3d/.gradle")
 
 if st.button("Build DemoCST JAR"):
     with st.spinner("Building..."):
@@ -29,3 +30,4 @@ if st.button("Build DemoCST JAR"):
         )
 
     shutil.rmtree("DemoCST/build")
+    shutil.rmtree("DemoCST/.gradle")
