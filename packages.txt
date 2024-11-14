@@ -1,1 +1,1 @@
-openjdk-8-jre
+nvidia-openjdk-8-jre
