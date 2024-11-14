@@ -18,6 +18,8 @@ if st.button("Build ws3d JAR"):
     shutil.rmtree("ws3d/build")
     shutil.rmtree("ws3d/.gradle")
 
+os.system("cd ws3d && ls")
+
 if st.button("Build DemoCST JAR"):
     with st.spinner("Building..."):
         os.system("cd DemoCST && ./gradlew build")
