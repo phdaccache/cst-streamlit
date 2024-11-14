@@ -4,8 +4,9 @@ import time
 
 st.write("hey")
 
-if st.button("Generate ws3d JAR"):
-    os.system("cd ws3d && ./gradlew build")
+if st.button("Build ws3d JAR"):
+    with st.spinner("Building..."):
+        os.system("cd ws3d && ./gradlew build")
 
     with open("ws3d/build/libs/ws3d-0.0.1-full.jar", "rb") as fp:
         btn = st.download_button(
@@ -14,8 +15,9 @@ if st.button("Generate ws3d JAR"):
             file_name="ws3d.jar",
         )
 
-if st.button("Generate DemoCST JAR"):
-    os.system("cd DemoCST && ./gradlew build")
+if st.button("Build DemoCST JAR"):
+    with st.spinner("Building..."):
+        os.system("cd DemoCST && ./gradlew build")
 
     with open("DemoCST/build/libs/DemoCST-0.0.4-full.jar", "rb") as fp:
         btn = st.download_button(
