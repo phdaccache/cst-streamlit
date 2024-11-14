@@ -5,7 +5,7 @@ import time
 st.write("hey")
 
 if st.button("generate"):
-    os.system("ws3d/gradlew build")
+    os.system("ws3d/gradlew build && cd ws3d && ls")
 if st.button("check 1"):
     os.system("ls")
 if st.button("check 2"):
