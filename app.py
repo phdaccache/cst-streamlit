@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import shutil
+import subprocess
 
 st.title("Test App")
 
@@ -14,6 +15,9 @@ if st.button("Build ws3d JAR"):
             data=fp,
             file_name="ws3d.jar",
         )
+
+    command = "java -jar ws3d.jar"
+    generated_descriptors = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout
 
     shutil.rmtree("ws3d/build")
     shutil.rmtree("ws3d/.gradle")
