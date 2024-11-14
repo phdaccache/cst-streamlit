@@ -1,1 +1,1 @@
-nvidia-openjdk-8-jre
+openjdk-8-demo
