@@ -16,7 +16,7 @@ if st.button("Build ws3d JAR"):
             file_name="ws3d.jar",
         )
 
-    command = "java -jar ws3d.jar"
+    command = "java -jar ws3d/build/libs/ws3d-0.0.1-full.jar"
     generated_descriptors = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout
 
     shutil.rmtree("ws3d/build")
