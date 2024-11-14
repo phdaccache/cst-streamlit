@@ -2,14 +2,11 @@ import streamlit as st
 import os
 import shutil
 
-st.write("hey")
+st.title("Test App")
 
 if st.button("Build ws3d JAR"):
     with st.spinner("Building..."):
         os.system("cd ws3d && ./gradlew build")
-
-    os.system("echo 'BEFORE'")
-    os.system("cd ws3d && ls -a")
 
     with open("ws3d/build/libs/ws3d-0.0.1-full.jar", "rb") as fp:
         btn = st.download_button(
@@ -20,9 +17,6 @@ if st.button("Build ws3d JAR"):
 
     shutil.rmtree("ws3d/build")
     shutil.rmtree("ws3d/.gradle")
-
-os.system("echo 'AFTER'")
-os.system("cd ws3d && ls -a")
 
 if st.button("Build DemoCST JAR"):
     with st.spinner("Building..."):
