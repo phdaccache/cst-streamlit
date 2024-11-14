@@ -4,7 +4,6 @@ import os
 st.write("hey")
 
 os.system("ws3d/gradlew build")
-os.system("ws3d/gradlew run")
 
 # os.system("DemoCST/gradlew build")
 # os.system("DemoCST/gradlew run")
