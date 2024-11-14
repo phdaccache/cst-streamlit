@@ -1,9 +1,11 @@
 import streamlit as st
 import os
+import time
 
 st.write("hey")
 
 os.system("ws3d/gradlew build")
+time.sleep(10)
 os.system("cd ws3d && ls")
 # os.system("DemoCST/gradlew build")
 # os.system("DemoCST/gradlew run")
