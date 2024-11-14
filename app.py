@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-import time
+import shutil
 
 st.write("hey")
 
@@ -25,3 +25,6 @@ if st.button("Build DemoCST JAR"):
             data=fp,
             file_name="democst.jar",
         )
+
+shutil.rmtree("ws3d/build")
+shutil.rmtree("DemoCST/build")
